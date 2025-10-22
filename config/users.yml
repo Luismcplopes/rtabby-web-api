@@ -1,0 +1,10 @@
+# declare users
+users:
+    - name: 'xxxx xxxxx'
+      token: '46931036-6870-4008-b2c5-dadcfc934f34'
+
+    - name: 'Axxxx xxxxxr'
+      token: 'a3a210b4-f952-4872-a17f-41248e96b8fe'
+
+    - name: 'Txxx xxxxx xxxxxxo'
+      token: 'f159fccb-d2ba-4a21-9314-61413c486f92'
