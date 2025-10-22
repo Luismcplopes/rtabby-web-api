@@ -1,0 +1,25 @@
+version: '3.2'
+services:
+  app:
+    image: ghcr.io/clem-fern/rtabby-web-api:sqlite
+    container_name: rtabby-web-api
+    ports:
+      - "10001:10001"
+    environment:
+      - DATABASE_URL=sqlite:///config/db.sqlite
+      - BIND_PORT=10001
+      - CONFIG_FILE=users.yml
+    deploy:
+      mode: replicated
+      replicas: 1
+    restart: unless-stopped
+    cap_add:
+      - "CAP_DAC_OVERRIDE"
+    cap_drop: ['ALL']
+    read_only: true
+    volumes:
+      - /home/user/folder/rtabby-web-api/config:/config
+    networks:
+      - frontend
+networks:
+  frontend:
