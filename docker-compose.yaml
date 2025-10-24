@@ -18,7 +18,7 @@ services:
     cap_drop: ['ALL']
     read_only: true
     volumes:
-      - /home/user/folder/rtabby-web-api/config:/config
+      - ./rtabby-web-api/config:/config
     networks:
       - frontend
 networks:
